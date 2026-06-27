@@ -28,13 +28,13 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-navy: #0A1628;
-  --color-navy-2: #0F2040;
-  --color-brand-red: #E8341C;
-  --color-brand-green: #16A34A;
-  --color-brand-amber: #D97706;
-  --color-surface: #F4F6F9;
-  --color-hairline: #E8ECF2;
+  --color-navy: #0a1628;
+  --color-navy-2: #0f2040;
+  --color-brand-red: #e8341c;
+  --color-brand-green: #16a34a;
+  --color-brand-amber: #d97706;
+  --color-surface: #f4f6f9;
+  --color-hairline: #e8ecf2;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -70,32 +70,77 @@
   * {
     border-color: var(--color-border);
   }
-  html, body {
+  html,
+  body {
     background-color: var(--color-surface);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
   }
 }
 
 @keyframes pulse-dot {
-  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(232, 52, 28, 0.6); }
-  50% { transform: scale(1.15); opacity: 0.85; box-shadow: 0 0 0 8px rgba(232, 52, 28, 0); }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(232, 52, 28, 0.6);
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+    box-shadow: 0 0 0 8px rgba(232, 52, 28, 0);
+  }
 }
-.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+.pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
 
 @keyframes blink-bg {
-  0%, 100% { background-color: #E8341C; }
-  50% { background-color: #b8200d; }
+  0%,
+  100% {
+    background-color: #e8341c;
+  }
+  50% {
+    background-color: #b8200d;
+  }
 }
-.blink-emergency { animation: blink-bg 1.4s ease-in-out infinite; }
+.blink-emergency {
+  animation: blink-bg 1.4s ease-in-out infinite;
+}
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.fade-up { animation: fade-up 0.35s ease-out both; }
+.fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+@keyframes pulse-btn {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(232, 52, 28, 0.5);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 6px rgba(232, 52, 28, 0);
+  }
+}
+.pulse-btn {
+  animation: pulse-btn 1.8s ease-in-out infinite;
+}
